@@ -1,0 +1,137 @@
+* {  /* Selects all elements */
+    margin: 0;  /* Removes default margins */
+    padding: 0;  /* Removes default padding */
+    box-sizing: border-box;  /* Includes padding and border in element's total width and height */
+    text-decoration: none;  /* Removes underline from all text */
+    list-style: none;  /* Removes list styles */
+}
+
+body{  /* Selects all body elements */
+    background-color: #171717;  /* Sets the background color */
+    color: #2188e7;  /* Sets the text color */
+    cursor: pointer;  /* Changes the cursor to a pointer */
+}
+
+.main{  /* Selects elements with class "main" */
+    display: table;  /* Changes the display to table */
+    height: 100vh;  /* Sets the height to 100% of the viewport height */
+    width: 100%;  /* Sets the width to 100% */
+}
+
+.myCircle{  /* Selects elements with class "myCircle" */
+    display: table-cell;  /* Changes the display to table-cell */
+    vertical-align: middle;  /* Centers content vertically */
+}   
+
+.mainCircle{  /* Selects elements with class "mainCircle" */
+    position: relative;  /* Sets the position to relative */
+    top: 0;  /* Aligns the top edge with the top edge of its nearest positioned ancestor */
+    height: 300px;  /* Sets the height */
+    width: 300px;  /* Sets the width */
+    margin: auto;  /* Centers the element */
+    /* background-color: red; */  /* Commented out background color */
+}
+
+.maincontent{  /* Selects elements with class "maincontent" */
+    position: absolute;  /* Sets the position to absolute */
+    top: 0;  /* Aligns the top edge with the top edge of its nearest positioned ancestor */
+    height: 100%;  /* Sets the height to 100% */
+    width: 100%;  /* Sets the width to 100% */
+    border-radius: 50%;  /* Rounds the corners */
+    /* background-color: red;  Commented out background color */
+}
+
+.circle {  /* Selects elements with class "circle" */
+    background-color: rgba(0, 0, 0, 0);  /* Sets the background color to transparent */
+    opacity: .9;  /* Sets the opacity */
+    height: 300px;  /* Sets the height */
+    width: 300px;  /* Sets the width */
+    margin-top: 0 auto;  /* Centers the element vertically */
+    box-shadow: 0 0 75px #2187e7;  /* Adds a shadow */
+    border-radius: 300px;  /* Rounds the corners */
+    animation: spinPlus 2s infinite ease-in-out;  /* Applies the animation */
+}
+
+@keyframes spinPlus {  /* Defines the animation */
+    0%{
+        transform: scale(1);  /* Starts the animation at normal size */
+    } 50% {
+        transform: scale(1.11);  /* Scales the element up halfway through the animation */
+    } 100% {
+        transform: scale(1);  /* Returns the element to normal size at the end of the animation */
+    }
+}
+
+
+.circle1 {  /* Selects elements with class "circle1" */
+    background-color: rgba(0, 0, 0, 0);  /* Sets the background color to transparent */
+    border: 5px solid rgba(0, 183, 229, 0.9);  /* Sets the border color and width */
+    margin: 0 auto;  /* Centers the element horizontally */
+    position: absolute;  /* Sets the position to absolute */
+    top: 25px;  /* Positions the element 25px from the top */
+    left: 25px;  /* Positions the element 25px from the left */
+    height: 250px;  /* Sets the height */
+    width: 250px;  /* Sets the width */
+    border-radius: 250px;  /* Rounds the corners */
+    border-left: 5px solid rgba(0, 0, 0, 0);  /* Sets the left border color and width */
+    border-right: 5px solid rgba(0, 0, 0, 0);  /* Sets the right border color and width */
+    box-shadow: 0px 0px 75px #2187e7;  /* Adds a shadow */
+    animation: spinPlusOff 5s infinite ease-in-out;  /* Applies the animation */
+}
+
+@keyframes spinPlusOff {  /* Defines the animation */
+    0%, 50%, 100% {
+        transform: rotate(0deg) scale(1.1);  /* Starts and ends the animation with no rotation and slightly scaled up */
+    }
+    50% {
+        transform: rotate(360deg) scale(1);  /* Rotates the element 360 degrees and scales it to normal size halfway through the animation */
+    }
+    50% {
+        transform: rotate(-360deg) scale(1);  /* Rotates the element -360 degrees and scales it to normal size halfway through the animation */
+    }
+}
+
+.bars{  /* Selects elements with class "bars" */
+    position: fixed;  /* Sets the position to fixed */
+    z-index: 3;  /* Sets the stack order */
+    margin: 0 auto;  /* Centers the element horizontally */
+    left: 49%;  /* Positions the element 49% from the left */
+    top: 50%;  /* Positions the element 50% from the top */
+    bottom: 50%;  /* Positions the element 50% from the bottom */
+    width: 60px;  /* Sets the width */
+    height: 60px;  /* Sets the height */
+    margin-top: -30px;  /* Moves the element up by half its height to center it vertically */
+}
+
+
+li{  /* Selects all list items */
+    background: #fff;  /* Sets the background color to white */
+    width: 10px;  /* Sets the width */
+    height: 10px;  /* Sets the height */
+    float: left;  /* Floats the element to the left */
+    margin-right: 5px;  /* Adds a margin to the right */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /* Adds a shadow */
+}
+
+@keyframes loaderBar {  /* Defines the animation */
+    0%{
+        height: 10px;  /* Starts the animation with the height set to 10px */
+        margin-top: 25px;  /* Moves the element down by 25px */
+    } 50% {
+        height: 50px;  /* Increases the height halfway through the animation */
+        margin-top: 0;  /* Moves the element to its original position */
+    } 100% {
+        height: 10px;  /* Returns the height to 10px at the end of the animation */
+        margin-top: 25px;  /* Moves the element down by 25px */
+    }
+}
+
+li:first-child {  /* Selects the first list item */
+    animation:  loaderBar 0.6s infinite 0s;  /* Applies the animation */
+}
+li:nth-child(2) {  /* Selects the second list item */
+    animation:  loaderBar 0.6s infinite -0.3s;  /* Applies the animation with a delay */
+}
+li:nth-child(3) {  /* Selects the third list item */
+    animation:  loaderBar 0.6s infinite -0.5s;  /* Applies the animation with a delay */
+}
