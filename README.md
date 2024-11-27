@@ -62,7 +62,7 @@
 
 4. **Run Jarvis:**
    ```bash
-   python jarvis.py
+   python run_jarvis.py
    ```
 
 ## Usage
