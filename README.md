@@ -1,7 +1,7 @@
 
 # J.A.R.V.I.S 
 
-![Jarvis Logo](https://in.pinterest.com/pin/517632550917051400/)  
+
 *Your personal AI-powered assistant for an enhanced digital experience.*
 
 ## Overview
